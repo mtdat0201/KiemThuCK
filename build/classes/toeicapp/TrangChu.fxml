@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toeicapp.TrangChuController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="-1.0" prefHeight="15.0" prefWidth="600.0" stylesheets="@Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="miClose" mnemonicParsing="false" onAction="#menuItemclose" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="mEdit" mnemonicParsing="false" text="Edit">
+            <items>
+                  <Menu mnemonicParsing="false" text="User">
+                    <items>
+                      <MenuItem fx:id="editUser" mnemonicParsing="false" onAction="#menuItemedituser" text="Edit User" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Question">
+                    <items>
+                      <MenuItem fx:id="addQuestion" mnemonicParsing="false" onAction="#menuItemaddquestion" text="Add Question" />
+                        <MenuItem fx:id="editQuestion" mnemonicParsing="false" onAction="#menuItemeditquestion" text="Edit Question" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane alignment="CENTER" layoutY="35.0" prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="6.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="292.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="98.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Picture/Icon/TrangChu/Toeic.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: BlanchedAlmond;" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="tenUser" styleClass="labeimage" text="TenUser">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="ngay" styleClass="labeimage" text="Ngay">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="gio" styleClass="labeimage" text="Dongho">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: BlanchedAlmond;" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="btnGrammar" fitHeight="77.0" fitWidth="85.0" onMouseClicked="#picAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Picture/Icon/TrangChu/Book.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="labeimage" text="Grammar" />
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="btnFill" fitHeight="77.0" fitWidth="85.0" onMouseClicked="#picAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Picture/Icon/TrangChu/Find.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="labeimage" text="Fill" />
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fx:id="btnPicture" fitHeight="77.0" fitWidth="85.0" onMouseClicked="#picAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Picture/Icon/TrangChu/Picture.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="labeimage" text="Photo" />
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: BlanchedAlmond;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <ImageView fx:id="btnAudio" fitHeight="77.0" fitWidth="85.0" onMouseClicked="#picAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Picture/Icon/TrangChu/Audio.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="labeimage" text="Audio" />
+               </children></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: Thistle;" GridPane.rowIndex="1" />
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: Thistle;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: Thistle;" GridPane.rowIndex="3" />
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: Thistle;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

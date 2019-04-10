@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="406.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toeicapp.QuanLyCauHoiController">
+   <children>
+      <VBox alignment="CENTER" layoutX="91.0" layoutY="61.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mainTitle" text="Thêm Câu Hỏi" />
+            <JFXTextField fx:id="txtCauhoi" prefHeight="35.0" prefWidth="406.0" promptText="Câu hỏi">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label fx:id="errCauhoi" styleClass="err" />
+            <JFXTextField fx:id="txtA" prefHeight="35.0" prefWidth="406.0" promptText="Câu trả lời A">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label styleClass="err" />
+            <JFXTextField fx:id="txtB" prefHeight="35.0" prefWidth="406.0" promptText="Câu trả lời B">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label styleClass="err" />
+            <JFXTextField fx:id="txtC" prefHeight="35.0" prefWidth="406.0" promptText="Câu trả lời C">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label styleClass="err" />
+            <JFXTextField fx:id="txtD" prefHeight="35.0" prefWidth="406.0" promptText="Câu trả lời D">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label styleClass="err" />
+            <JFXTextField fx:id="txtDapan" prefHeight="35.0" prefWidth="406.0" promptText="Đáp án">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label fx:id="errDapan" styleClass="err" />
+            <JFXComboBox fx:id="cbTheloai" prefHeight="26.0" prefWidth="136.0" promptText="Loại câu hỏi" />
+            <Label fx:id="errTheloai" styleClass="err" />
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="406.0">
+               <children>
+                  <JFXTextField fx:id="txtUrlpicture" editable="false" promptText="Url Ảnh" />
+                  <JFXTextField fx:id="txtUrlaudio" editable="false" promptText="Url Audio" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="406.0">
+               <children>
+                  <JFXButton fx:id="btnPicture" onAction="#btPicture" text="Ảnh" />
+                  <JFXButton fx:id="btnThem" onAction="#btThem" text="Thêm">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnReset" onAction="#btReset" text="Reset" />
+                  <JFXButton fx:id="btnAudio" onAction="#btAudio" text="Audio" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

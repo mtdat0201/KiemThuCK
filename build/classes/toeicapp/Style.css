@@ -1,0 +1,99 @@
+#Login{
+    -fx-background-color:dodgerblue;
+}
+
+#DangKy{
+    -fx-background-color: chocolate;
+}
+
+*{
+    -fx-primary: white;
+    -fx-secondary: #1451e0;
+}
+
+.err
+{
+    -fx-text-fill: red;
+}
+.errLogin
+{
+    -jfx-unfocus-color: orange;
+    -jfx-focus-color: red;
+}
+
+.button{
+    -fx-background-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+    -fx-font-size: 12pt;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.button:hover{
+    -fx-border-color: #40e0d0;
+    -fx-background-color: #40e0d0;
+    -fx-text-fill: -fx-primary;
+}
+
+.comboBox{
+    -fx-prompt-text-fill: burlywood;
+}
+
+.text-field
+{
+    -fx-text-fill: -fx-primary;
+    -fx-font-size : 13pt;
+    -jfx-focus-color: -fx-secondary;
+    -fx-prompt-text-fill: burlywood;
+    -fx-text-fill: derive(-fx-primary, 20%);
+}
+
+.textcontent{
+    -fx-font-size : 15pt;
+    -fx-font-family:"Time new roman";
+} 
+
+.labeimage{
+    -fx-text-fill: PaleVioletRed ;
+    -fx-font-size : 13pt;
+    -fx-font-family:"Time new roman";
+    -fx-font-weight:bold;
+}
+
+
+GridPane, VBox{
+    -fx-font-family: Tahoma; 
+    -fx-font-size: 13; 
+    -fx-background-color: #D6DFF0; 
+}
+
+GridPane, VBox, HBox { 
+    -fx-spacing: 5; 
+} 
+
+Label.bottom{
+    -fx-text-fill: #4F2683; 
+    -fx-font-weight: bold; 
+    -fx-wrap-text: true;   
+}
+
+
+Text.mainSubject{
+    -fx-font-size: 45; 
+    -fx-font-weight: bold; 
+    -fx-fill: gold; 
+    -fx-stroke: blue; 
+    -fx-stroke-width: 2; 
+}
+
+.center { 
+    -fx-alignment: CENTER; 
+}
+
+Text.mainTitle{
+    -fx-font-size: 30; 
+    -fx-font-weight: bold; 
+    -fx-fill: floralwhite; 
+}
+
