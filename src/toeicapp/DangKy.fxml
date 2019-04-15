@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="DangKy" alignment="TOP_CENTER" prefHeight="579.0" prefWidth="393.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toeicapp.DangKyController">
+   <children>
+      <GridPane id="DangKy" alignment="CENTER" prefHeight="605.0" prefWidth="590.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="233.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="37.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mainTitle" text="Đăng ký Account" GridPane.columnSpan="2" />
+            <JFXTextField fx:id="txtUsername" labelFloat="true" prefHeight="35.0" prefWidth="466.0" promptText="Tên tài khoản" styleClass="Singup" GridPane.rowIndex="1" />
+            <JFXPasswordField fx:id="txtPass" labelFloat="true" promptText="Password" styleClass="Singup" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="txtFirstname" labelFloat="true" promptText="Họ" styleClass="Singup" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="txtLastname" labelFloat="true" promptText="Tên" styleClass="Singup" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="txtEmail" labelFloat="true" promptText="Email" styleClass="Singup" GridPane.rowIndex="5" />
+            <JFXComboBox fx:id="cmbQuyen" focusColor="WHITE" promptText="Loại tài khoản" styleClass="comboBox" unFocusColor="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <JFXButton fx:id="btnCreateAccount" onAction="#dkButton" text="Đăng ký" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <JFXButton fx:id="btnReset" onAction="#resetButton" prefHeight="34.0" prefWidth="86.0" text="Reset" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXButton>
+            <Label fx:id="errUser" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="errPassword" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="errFirstname" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="errLastname" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="errEmail" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="errQuyen" styleClass="err" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <VBox.margin>
+            <Insets left="40.0" right="20.0" top="10.0" />
+         </VBox.margin>
+      </GridPane>
+   </children>
+</VBox>
